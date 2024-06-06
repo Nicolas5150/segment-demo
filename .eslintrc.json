@@ -1,0 +1,154 @@
+{
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "plugin:react/jsx-runtime",
+      "plugin:prettier/recommended"
+    ],
+    "globals": {
+      "vi": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "rules": {
+      // Explicitly using any as a type goes against the core of TypeScript
+      "@typescript-eslint/no-explicit-any": "error",
+  
+      // Namespaces are apparently outdated:
+      // https://typescript-eslint.io/rules/no-namespace/
+      "@typescript-eslint/no-namespace": "error",
+  
+      // Disabled by eslint-config-prettier, but turning back on since it is
+      // best practice
+      "curly": ["error", "all"],
+  
+      // This causes too many false positives in storybook and configuration files
+      "import/no-extraneous-dependencies": "off",
+  
+      // Using named exports is preferred:
+      // https://rajeshnaroth.medium.com/avoid-es6-default-exports-a24142978a7a
+      // https://blog.neufund.org/why-we-have-banned-default-exports-and-you-should-do-the-same-d51fdc2cf2ad
+      "import/no-default-export": "error",
+      "import/prefer-default-export": "off",
+  
+      // Bug in airbnb configuration: https://github.com/airbnb/javascript/issues/2505
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "function-declaration",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+  
+      // Certain Material UI components use duplicate props with different casing
+      "react/jsx-no-duplicate-props": ["error", { "ignoreCase": false }],
+  
+      // Sometimes the children prop could be either a single element or an
+      // array of elements in TypeScript. This fixes false positives that come
+      // up when returning <>{children}</>.
+      "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+  
+      // Prop spreading is useful when forwarding props from MUI components or
+      // other third party libraries. But we must be diligent to ensure that we
+      // are using it appropriately and sparingly.
+      "react/jsx-props-no-spreading": "off",
+  
+      // Prop types are not required because we are using TypeScript
+      "react/prop-types": "off",
+      "react/require-default-props": "off",
+  
+      // Allow only the "fill" attribute on svg elements
+      "react/no-unknown-property": ["error", { "ignore": ["fill"] }],
+  
+      "react/jsx-sort-props": [
+        2,
+        {
+          "callbacksLast": true,
+          "ignoreCase": false,
+          "locale": "auto",
+          "multiline": "ignore",
+          "noSortAlphabetically": false,
+          "reservedFirst": false,
+          "shorthandFirst": true
+        }
+      ],
+  
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": true,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }
+      ],
+  
+      "import/order": [
+        1,
+        {
+          "groups": [
+            "external",
+            "builtin",
+            "internal",
+            "sibling",
+            "parent",
+            "index"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "@/**",
+              "group": "internal"
+            }
+          ]
+        }
+      ],
+  
+      // I can't think of a linter rule I care about less than this. Why they
+      // turned it on by default is beyond me.
+      "unicode-bom": "off"
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "typescript": {
+          "alwaysTryTypes": true
+        }
+      }
+    },
+    "overrides": [
+      {
+        "files": ["*.stories.tsx"],
+        "rules": {
+          "import/no-default-export": "off",
+          "react/function-component-definition": "off"
+        }
+      },
+      {
+        "files": ["src/i18n/**/*.{ts,tsx}"],
+        "rules": {
+          "sort-keys": [
+            "error",
+            "asc",
+            {
+              "allowLineSeparatedGroups": true,
+              "caseSensitive": false,
+              "minKeys": 2,
+              "natural": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

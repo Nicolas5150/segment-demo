@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "Todos"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript", "typescript"]
+}
