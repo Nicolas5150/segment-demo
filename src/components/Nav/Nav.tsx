@@ -1,10 +1,40 @@
+import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export function Nav() {
   return (
-    <nav>
-      <div>Segment Demo</div>
-      <ul>
+    <Box
+      component="nav"
+      sx={{
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        mb: 2,
+        width: "100%",
+      }}
+    >
+      <Typography
+        component="div"
+        sx={{ fontSize: "1.2rem", pr: { xs: 2, md: 0 } }}
+      >
+        Segment Demo
+      </Typography>
+      <Box
+        component="ul"
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: { xs: 5, sm: 15 },
+          justifyContent: "space-between",
+          listStyleType: "none",
+          padding: 0,
+          a: {
+            textDecoration: "none",
+            color: "blue",
+          },
+        }}
+      >
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -15,7 +45,7 @@ export function Nav() {
         <li>
           <Link to="/article">Articles</Link>
         </li>
-      </ul>
-    </nav>
+      </Box>
+    </Box>
   );
 }
