@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+// https://galaxies.dev/quickwin/react-router-typescript
 export function App() {
   return (
     <div className="App">
