@@ -9,7 +9,7 @@
       "Economics"
     ],
     "uuid": "1a2b3c4d5e6f",
-    "image": "https://example.com/finance.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Cooking with Spices",
@@ -20,7 +20,7 @@
       "Cooking"
     ],
     "uuid": "7g8h9i0j1k2l",
-    "image": "https://example.com/cooking.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The World of Sports",
@@ -31,7 +31,7 @@
       "Sports"
     ],
     "uuid": "3m4n5o6p7q8r",
-    "image": "https://example.com/sports.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Investing in Real Estate",
@@ -43,7 +43,7 @@
       "Real Estate"
     ],
     "uuid": "9s0t1u2v3w4x",
-    "image": "https://example.com/real-estate.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Healthy Cooking Tips",
@@ -55,7 +55,7 @@
       "Health"
     ],
     "uuid": "5y6z7a8b9c0d",
-    "image": "https://example.com/healthy-cooking.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Top Fitness Routines",
@@ -67,7 +67,7 @@
       "Health"
     ],
     "uuid": "1e2f3g4h5i6j",
-    "image": "https://example.com/fitness.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Future of Technology",
@@ -78,7 +78,7 @@
       "Technology"
     ],
     "uuid": "7k8l9m0n1o2p",
-    "image": "https://example.com/technology.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring the Great Outdoors",
@@ -90,7 +90,7 @@
       "Adventure"
     ],
     "uuid": "3q4r5s6t7u8v",
-    "image": "https://example.com/outdoors.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Art of Baking",
@@ -102,7 +102,7 @@
       "Baking"
     ],
     "uuid": "9w0x1y2z3a4b",
-    "image": "https://example.com/baking.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Traveling on a Budget",
@@ -114,7 +114,7 @@
       "Finance"
     ],
     "uuid": "5c6d7e8f9g0h",
-    "image": "https://example.com/budget-travel.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "DIY Home Improvement",
@@ -126,7 +126,7 @@
       "Home Improvement"
     ],
     "uuid": "1i2j3k4l5m6n",
-    "image": "https://example.com/home-improvement.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Mastering Yoga",
@@ -138,7 +138,7 @@
       "Health"
     ],
     "uuid": "7o8p9q0r1s2t",
-    "image": "https://example.com/yoga.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring Historical Sites",
@@ -150,7 +150,7 @@
       "History"
     ],
     "uuid": "3u4v5w6x7y8z",
-    "image": "https://example.com/historical-sites.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Gardening for Beginners",
@@ -161,7 +161,7 @@
       "Gardening"
     ],
     "uuid": "9a0b1c2d3e4f",
-    "image": "https://example.com/gardening.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Introduction to Coding",
@@ -173,7 +173,7 @@
       "Education"
     ],
     "uuid": "5g6h7i8j9k0l",
-    "image": "https://example.com/coding.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Sustainable Living Tips",
@@ -185,7 +185,7 @@
       "Lifestyle"
     ],
     "uuid": "1m2n3o4p5q6r",
-    "image": "https://example.com/sustainable-living.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring Local Cuisine",
@@ -197,7 +197,7 @@
       "Cooking"
     ],
     "uuid": "7s8t9u0v1w2x",
-    "image": "https://example.com/local-cuisine.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Basics of Photography",
@@ -209,7 +209,7 @@
       "Art"
     ],
     "uuid": "9y0z1a2b3c4d",
-    "image": "https://example.com/photography.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Developing Effective Study Habits",
@@ -221,7 +221,7 @@
       "Self-Improvement"
     ],
     "uuid": "5e6f7g8h9i0j",
-    "image": "https://example.com/study-habits.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Embracing Mindfulness",
@@ -233,7 +233,7 @@
       "Self-Improvement"
     ],
     "uuid": "1k2l3m4n5o6p",
-    "image": "https://example.com/mindfulness.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring Science Fiction",
@@ -245,7 +245,7 @@
       "Entertainment"
     ],
     "uuid": "7q8r9s0t1u2v",
-    "image": "https://example.com/science-fiction.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Advancements in Artificial Intelligence",
@@ -257,7 +257,7 @@
       "Science"
     ],
     "uuid": "1a2b3c4d5e6f",
-    "image": "https://example.com/ai.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Healthy Eating Habits",
@@ -269,7 +269,7 @@
       "Nutrition"
     ],
     "uuid": "7g8h9i0j1k2l",
-    "image": "https://example.com/healthy-eating.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Benefits of Volunteering",
@@ -281,7 +281,7 @@
       "Self-Improvement"
     ],
     "uuid": "3m4n5o6p7q8r",
-    "image": "https://example.com/volunteering.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Evolution of Music",
@@ -293,7 +293,7 @@
       "Culture"
     ],
     "uuid": "5s6t7u8v9w0x",
-    "image": "https://example.com/music.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Climate Change and Its Impact",
@@ -305,7 +305,7 @@
       "Science"
     ],
     "uuid": "1y2z3a4b5c6d",
-    "image": "https://example.com/climate-change.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Rise of E-commerce",
@@ -317,7 +317,7 @@
       "Technology"
     ],
     "uuid": "7e8f9g0h1i2j",
-    "image": "https://example.com/e-commerce.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Joy of Painting",
@@ -329,7 +329,7 @@
       "Self-Improvement"
     ],
     "uuid": "3k4l5m6n7o8p",
-    "image": "https://example.com/painting.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Innovations in Healthcare",
@@ -341,7 +341,7 @@
       "Technology"
     ],
     "uuid": "9q0r1s2t3u4v",
-    "image": "https://example.com/healthcare.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Art of Public Speaking",
@@ -353,7 +353,7 @@
       "Self-Improvement"
     ],
     "uuid": "5w6x7y8z9a0b",
-    "image": "https://example.com/public-speaking.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Sustainable Fashion",
@@ -365,7 +365,7 @@
       "Environment"
     ],
     "uuid": "1c2d3e4f5g6h",
-    "image": "https://example.com/sustainable-fashion.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Mastering Time Management",
@@ -377,7 +377,7 @@
       "Self-Improvement"
     ],
     "uuid": "7i8j9k0l1m2n",
-    "image": "https://example.com/time-management.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Importance of Mental Health",
@@ -389,7 +389,7 @@
       "Self-Improvement"
     ],
     "uuid": "3o4p5q6r7s8t",
-    "image": "https://example.com/mental-health.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring Virtual Reality",
@@ -401,7 +401,7 @@
       "Innovation"
     ],
     "uuid": "9u0v1w2x3y4z",
-    "image": "https://example.com/virtual-reality.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Future of Renewable Energy",
@@ -413,7 +413,7 @@
       "Technology"
     ],
     "uuid": "5a6b7c8d9e0f",
-    "image": "https://example.com/renewable-energy.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "Exploring Space: The Final Frontier",
@@ -425,7 +425,7 @@
       "Space"
     ],
     "uuid": "1g2h3i4j5k6l",
-    "image": "https://example.com/space-exploration.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Power of Positive Thinking",
@@ -437,7 +437,7 @@
       "Mental Health"
     ],
     "uuid": "7m8n9o0p1q2r",
-    "image": "https://example.com/positive-thinking.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Art of Mindfulness",
@@ -449,7 +449,7 @@
       "Health"
     ],
     "uuid": "3s4t5u6v7w8x",
-    "image": "https://example.com/mindfulness.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Impact of Social Media",
@@ -461,7 +461,7 @@
       "Communication"
     ],
     "uuid": "9y0z1a2b3c4d",
-    "image": "https://example.com/social-media.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Evolution of Video Games",
@@ -473,7 +473,7 @@
       "Technology"
     ],
     "uuid": "5e6f7g8h9i0j",
-    "image": "https://example.com/video-games.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Significance of Sleep",
@@ -485,7 +485,7 @@
       "Self-Improvement"
     ],
     "uuid": "1k2l3m4n5o6p",
-    "image": "https://example.com/sleep.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Art of Photography",
@@ -497,7 +497,7 @@
       "Technology"
     ],
     "uuid": "7q8r9s0t1u2v",
-    "image": "https://example.com/photography.jpg"
+    "image": "/imgs/sample.jpg"
   },
   {
     "title": "The Impact of Exercise on Mental Health",
@@ -509,6 +509,6 @@
       "Self-Improvement"
     ],
     "uuid": "5w6x7y8z9a0b",
-    "image": "https://example.com/exercise.jpg"
+    "image": "/imgs/sample.jpg"
   }
 ]
