@@ -1,0 +1,11 @@
+[
+    {
+        "url": "https://google.com",
+        "categories": [
+            "Finance",
+            "Economics"
+        ],
+        "image": "/imgs/sample.jpg",
+        "uuid": "qwerty123456"
+    }
+]

@@ -55,6 +55,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         {/* eslint-disable-next-line react/destructuring-assignment */}
         {articles.map(({ title, author, image, body }) => (
           <Box
+            key={title}
             sx={{
               boxShadow: "2px 7px 10px lightgray",
               m: 2,
@@ -70,7 +71,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
               },
             }}
           >
-            <Box key={title}>
+            <Box>
               <Typography component="h5" sx={{ height: "70px" }} variant="h5">
                 {title}
               </Typography>
