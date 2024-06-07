@@ -4,15 +4,17 @@ import { Nav } from "src/components/Nav/Nav";
 
 export function Main() {
   return (
-    <Box
-      sx={{
-        px: 2,
-        maxWidth: "2060px",
-        margin: "auto",
-      }}
-    >
+    <>
       <Nav />
-      <Outlet />
-    </Box>
+      <Box
+        sx={{
+          px: 2,
+          maxWidth: "2060px",
+          margin: "auto",
+        }}
+      >
+        <Outlet />
+      </Box>
+    </>
   );
 }

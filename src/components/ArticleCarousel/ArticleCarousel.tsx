@@ -31,6 +31,12 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
     <Box
       sx={{
         borderTop: "solid 1px lightgray",
+        "&:first-of-type": {
+          borderTop: "none",
+          "& h4": {
+            pt: 0,
+          },
+        },
         "& .carousel-container": {
           mb: 4,
           pb: 2,
@@ -40,7 +46,14 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         },
       }}
     >
-      <Typography component="h4" sx={{ pt: 2, pb: 1 }} variant="h4">
+      <Typography
+        component="h4"
+        sx={{
+          pt: 2,
+          pb: 1,
+        }}
+        variant="h4"
+      >
         {category}
       </Typography>
       <Carousel
