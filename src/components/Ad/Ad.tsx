@@ -1,18 +1,19 @@
-import { Box } from "@mui/material";
-import { Ad as AdType } from "src/types/data/ad";
+import { Box, Typography } from "@mui/material";
+import { Product as ProductType } from "src/types/data/product";
 
 type AdProps = {
-  ad: AdType;
+  product: ProductType;
   currentCategory: string;
 };
 
-export function Ad({ ad, currentCategory }: AdProps) {
+export function Ad({ product, currentCategory }: AdProps) {
+  const { title, image, price } = product;
   return (
     <Box
       sx={{
         boxShadow: "2px 7px 10px lightgray",
         ml: 2,
-        height: "125px",
+
         p: 2,
         transition: "scale 200ms ease-in-out",
         backfaceVisibility: "hidden",
@@ -23,8 +24,37 @@ export function Ad({ ad, currentCategory }: AdProps) {
         },
       }}
     >
-      {ad.url}
-      {currentCategory}
+      <Typography
+        component="h6"
+        sx={{
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          display: "-webkit-box",
+          WebkitLineClamp: "2",
+          WebkitBoxOrient: "vertical",
+          fontSize: ".95rem",
+        }}
+        variant="h6"
+      >
+        {title}
+      </Typography>
+      <Typography component="div" sx={{ fontSize: ".95rem" }}>
+        <b>Price: </b>
+        {`$${price}`}
+      </Typography>
+      <Box
+        alt={title}
+        component="img"
+        data-cateory={currentCategory}
+        src={image}
+        sx={{
+          objectFit: "cover",
+          width: "100%",
+          height: "75px",
+          display: "block",
+          margin: "auto",
+        }}
+      />
     </Box>
   );
 }

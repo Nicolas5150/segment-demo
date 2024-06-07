@@ -1,42 +1,182 @@
-{
-    "apple": [
-        {
-            "title": "iPhone 15",
-            "uuid": "",
-            "price": "1199.99",
-            "body": "Introducing the iPhone 15, Apple's latest innovation that seamlessly combines cutting-edge technology with elegant design. Featuring a sleek, durable ceramic shield front cover and aerospace-grade aluminum edges, the iPhone 15 is as stylish as it is robust. Powered by the new A17 Bionic chip, it delivers lightning-fast performance and efficiency, making multitasking, gaming, and streaming smoother than ever. The Super Retina XDR display offers stunning visuals with true-to-life colors, while the state-of-the-art camera system, including a 48MP main camera, captures professional-quality photos and videos.",
-            "image": "https://www.apple.com/v/iphone/home/bu/images/meta/iphone__ky2k6x5u6vue_og.png"
-        },
-        {
-            "title": "iPad Pro",
-            "uuid": "",
-            "price": "999.99",
-            "body": "The all-new iPad Pro packs astonishing power into an unbelievably thin, light, and portable design. Push the limits of what’s possible on iPad with a superportable 11-inch model and an expansive 13-inch model that is the thinnest product Apple has ever created. The new Ultra Retina XDR display introduces groundbreaking tandem OLED technology. Extreme brightness, incredibly precise contrast, and advanced technologies like ProMotion and True Tone give you a jaw-dropping visual experience. And you can use Reference Mode for color-accurate workflows.",
-            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-spaceblack-glossy-wificell?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1713697851258"
-        },
-        {
-            "title": "AirPods",
-            "uuid": "",
-            "price": "129.99",
-            "body": "AirPods Pro take the listening experience to a new level of individuality. Personalized Spatial Audio with dynamic head tracking works with all your devices to immerse you deeper in all-around-you sound.4 And Adaptive EQ accounts for the fit of AirPods Pro, so you hear every frequency just as it was intended.",
-            "image": "https://5.imimg.com/data5/ANDROID/Default/2023/5/308765434/SO/YS/KD/119910517/product-jpeg-1000x1000.jpg"
-        },
-        {
-            "title": "Apple Watch",
-            "uuid": "",
-            "price": "699.99",
-            "body": "Introducing the Apple Watch, the ultimate companion for a healthy and connected lifestyle. This sleek and stylish smartwatch boasts a durable, swim-proof design with a stunning Always-On Retina display for easy viewing in any light. Powered by the latest S6 SiP with a 64-bit dual-core processor, it offers fast and smooth performance for all your needs. The Apple Watch features advanced health and fitness tracking, including blood oxygen monitoring, ECG capabilities, and comprehensive workout metrics, helping you stay on top of your health goals. With built-in GPS, cellular connectivity, and a variety of customizable watch faces and bands, it seamlessly integrates into your daily routine",
-            "image": "https://www.apple.com/v/watch/bm/images/meta/watch-gps-lte__f3xmp4zpdka6_og.png"
-        },
-        {
-            "title": "Apple TV",
-            "uuid": "",
-            "price": "299.99",
-            "body": "Introducing the Apple TV, your gateway to a world of immersive entertainment. With its sleek design and powerful A12 Bionic chip, Apple TV delivers stunning 4K HDR visuals and immersive Dolby Atmos sound, transforming your living room into a cinematic experience. Enjoy access to a vast array of content, including Apple TV+, Netflix, Disney+, and more, all in one place. The intuitive tvOS interface and Siri Remote make navigating your favorite shows, movies, and games effortless. Plus, with AirPlay, you can easily share content from your iPhone, iPad, or Mac to your TV.",
-            "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJ6Aa1dcrkQA/v0/-1x-1.jpg"
-        }
-    ],
-    "android": [],
-    "windows": [],
-    "gear": []
-}
+[
+    {
+        "title": "iPhone 15",
+        "uuid": "",
+        "price": "1199.99",
+        "body": "Introducing the iPhone 15, Apple's latest innovation that seamlessly combines cutting-edge technology with elegant design. Featuring a sleek, durable ceramic shield front cover and aerospace-grade aluminum edges, the iPhone 15 is as stylish as it is robust. Powered by the new A17 Bionic chip, it delivers lightning-fast performance and efficiency, making multitasking, gaming, and streaming smoother than ever. The Super Retina XDR display offers stunning visuals with true-to-life colors, while the state-of-the-art camera system, including a 48MP main camera, captures professional-quality photos and videos.",
+        "image": "https://www.apple.com/v/iphone/home/bu/images/meta/iphone__ky2k6x5u6vue_og.png",
+        "categories": [
+            "Apple"
+        ]
+    },
+    {
+        "title": "iPad Pro",
+        "uuid": "",
+        "price": "999.99",
+        "body": "The all-new iPad Pro packs astonishing power into an unbelievably thin, light, and portable design. Push the limits of what’s possible on iPad with a superportable 11-inch model and an expansive 13-inch model that is the thinnest product Apple has ever created. The new Ultra Retina XDR display introduces groundbreaking tandem OLED technology. Extreme brightness, incredibly precise contrast, and advanced technologies like ProMotion and True Tone give you a jaw-dropping visual experience. And you can use Reference Mode for color-accurate workflows.",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-spaceblack-glossy-wificell?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1713697851258",
+        "categories": [
+            "Apple"
+        ]
+    },
+    {
+        "title": "AirPods",
+        "uuid": "",
+        "price": "129.99",
+        "body": "AirPods Pro take the listening experience to a new level of individuality. Personalized Spatial Audio with dynamic head tracking works with all your devices to immerse you deeper in all-around-you sound.4 And Adaptive EQ accounts for the fit of AirPods Pro, so you hear every frequency just as it was intended.",
+        "image": "https://5.imimg.com/data5/ANDROID/Default/2023/5/308765434/SO/YS/KD/119910517/product-jpeg-1000x1000.jpg",
+        "categories": [
+            "Apple"
+        ]
+    },
+    {
+        "title": "Apple Watch",
+        "uuid": "",
+        "price": "699.99",
+        "body": "Introducing the Apple Watch, the ultimate companion for a healthy and connected lifestyle. This sleek and stylish smartwatch boasts a durable, swim-proof design with a stunning Always-On Retina display for easy viewing in any light. Powered by the latest S6 SiP with a 64-bit dual-core processor, it offers fast and smooth performance for all your needs. The Apple Watch features advanced health and fitness tracking, including blood oxygen monitoring, ECG capabilities, and comprehensive workout metrics, helping you stay on top of your health goals. With built-in GPS, cellular connectivity, and a variety of customizable watch faces and bands, it seamlessly integrates into your daily routine",
+        "image": "https://www.apple.com/v/watch/bm/images/meta/watch-gps-lte__f3xmp4zpdka6_og.png",
+        "categories": [
+            "Apple"
+        ]
+    },
+    {
+        "title": "Apple TV",
+        "uuid": "",
+        "price": "299.99",
+        "body": "Introducing the Apple TV, your gateway to a world of immersive entertainment. With its sleek design and powerful A12 Bionic chip, Apple TV delivers stunning 4K HDR visuals and immersive Dolby Atmos sound, transforming your living room into a cinematic experience. Enjoy access to a vast array of content, including Apple TV+, Netflix, Disney+, and more, all in one place. The intuitive tvOS interface and Siri Remote make navigating your favorite shows, movies, and games effortless. Plus, with AirPlay, you can easily share content from your iPhone, iPad, or Mac to your TV.",
+        "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJ6Aa1dcrkQA/v0/-1x-1.jpg",
+        "categories": [
+            "Apple"
+        ]
+    },
+    {
+        "title": "Samsung S24",
+        "uuid": "",
+        "price": "1299.99",
+        "body": "The Samsung Galaxy S24 is a flagship smartphone that combines sleek design with cutting-edge technology. Featuring a 6.8-inch Dynamic AMOLED 2X display with QHD+ resolution and a 120Hz refresh rate, it delivers stunning visuals and smooth performance. Powered by the latest Exynos 2200 or Snapdragon 8 Gen 3 processor (depending on the region), and equipped with up to 12GB of RAM and 512GB of storage, the Galaxy S24 handles multitasking and gaming with ease. Its versatile triple-camera system, including a 108MP main sensor, ensures high-quality photos and videos, while the 5000mAh battery with fast charging keeps you powered throughout the day. Running on One UI 5.0 based on Android 14, the Galaxy S24 offers an intuitive user experience, enhanced security features, and support for 5G connectivity, making it a top choice for tech enthusiasts.",
+        "image": "https://images.samsung.com/is/image/samsung/assets/us/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-cobalt-violet-back-mo.jpg?imbypass=true",
+        "categories": [
+            "Android"
+        ]
+    },
+    {
+        "title": "Google Nest Thermostat",
+        "uuid": "",
+        "price": "249.99",
+        "body": "The Google Nest is a versatile smart home device that combines a sleek design with advanced technology to enhance your home environment. With its intuitive interface and voice control powered by Google Assistant, the Nest seamlessly integrates with other smart devices, allowing you to control lighting, temperature, and security with ease. Its high-definition display and powerful speakers deliver clear visuals and immersive audio, making it perfect for streaming music, videos, and video calls. The Google Nest also features advanced sensors and machine learning capabilities to optimize energy usage and provide personalized recommendations, ensuring a comfortable and efficient living space. Whether you're automating your home or managing your daily tasks, the Google Nest offers a convenient and intelligent solution to modern living.",
+        "image": "https://www.cnet.com/a/img/resize/95992bc56e5ca09447f166b948e7baa912b2f6b9/hub/2018/05/11/1f9543a2-025f-4b26-b442-af50018896f5/nest-thermostat-redo-1.jpg?auto=webp&fit=cover&height=482&width=856",
+        "categories": [
+            "Android"
+        ]
+    },
+    {
+        "title": "Google Nest Mini",
+        "uuid": "",
+        "price": "129.99",
+        "body": "The Google Nest Mini is a compact and affordable smart speaker that brings the convenience of Google Assistant to any room in your home. Despite its small size, the Nest Mini delivers surprisingly rich sound quality, making it ideal for listening to music, podcasts, or audiobooks. With built-in Google Assistant, you can use your voice to control smart home devices, set reminders, check the weather, and more. The Nest Mini also features a sleek design that blends seamlessly into any decor, and its fabric top is made from 100% recycled plastic bottles, reflecting Google's commitment to sustainability. Whether you're looking to start your smart home journey or expand your existing setup, the Google Nest Mini is a versatile and affordable option that brings the power of Google Assistant to your fingertips.",
+        "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/Google-Nest-Mini-All-colors.jpg",
+        "categories": [
+            "Android"
+        ]
+    },
+    {
+        "title": "Samsung Galaxy Watch 6",
+        "uuid": "",
+        "price": "329.99",
+        "body": "The Samsung Galaxy Watch 6 is a stylish and versatile smartwatch that combines advanced health and fitness tracking with convenient smart features. With a stunning circular AMOLED display and rotating bezel for easy navigation, the Galaxy Watch 6 offers a premium look and feel. It features a wide range of health and wellness tracking capabilities, including heart rate monitoring, blood oxygen saturation measurement, sleep tracking, and stress management tools. The watch also offers advanced workout tracking with automatic detection for various activities and built-in GPS for accurate distance tracking. On the smart side, the Galaxy Watch 6 allows you to receive notifications, make calls, and use apps directly from your wrist. With its long-lasting battery life and water resistance, the Samsung Galaxy Watch 6 is the perfect companion for staying connected and motivated throughout your day.",
+        "image": "https://media.cnn.com/api/v1/images/stellar/prod/gw6-family-01-configurator-800x600.jpg?c=16x9&q=h_720,w_1280,c_fill",
+        "categories": [
+            "Android"
+        ]
+    },
+    {
+        "title": "Microsoft Windows 11 Pro",
+        "uuid": "",
+        "price": "199.99",
+        "body": "Microsoft Windows 11 Pro is the latest iteration of Microsoft's renowned operating system, designed to deliver a seamless and innovative computing experience. With its sleek and modern user interface, Windows 11 Pro offers a refreshing visual overhaul, featuring a centered Start menu, taskbar, and system tray for easy access to your favorite apps and tools. This version also introduces Snap Layouts and Snap Groups, empowering users to organize and multitask with ease, while also providing a more intuitive window management experience. Windows 11 Pro is optimized for productivity, security, and compatibility, offering advanced features such as Virtual Desktops, Microsoft Defender Antivirus, and support for running Android apps through the Microsoft Store. Whether you're a professional, a creative, or a gamer, Windows 11 Pro is designed to meet your needs, providing a powerful and efficient platform for all your computing tasks.",
+        "image": "https://helios-i.mashable.com/imagery/articles/06rZkX0a6lzzmFnlH9fm87J/hero-image.fill.size_1248x702.v1705676677.png",
+        "categories": [
+            "Windows"
+        ]
+    },
+    {
+        "title": "Surface Pro 10",
+        "uuid": "",
+        "price": "1899.99",
+        "body": "The Surface Pro 10 is Microsoft's flagship 2-in-1 device, combining the versatility of a tablet with the power of a laptop. It features a stunning PixelSense display with ultra-slim bezels, providing a crisp and immersive viewing experience. Powered by the latest Intel processors, the Surface Pro 10 offers blazing-fast performance for productivity, creativity, and entertainment. The device also boasts a redesigned Type Cover with improved key travel for a comfortable typing experience, as well as a new Surface Slim Pen that attaches magnetically for easy storage and charging. With all-day battery life, Windows 11 Pro, and a range of connectivity options including USB-C and Thunderbolt 4, the Surface Pro 10 is the ultimate device for professionals and creatives on the go.",
+        "image": "https://m.media-amazon.com/images/I/61NO4xAbodL._AC_UF894,1000_QL80_.jpg",
+        "categories": [
+            "Windows"
+        ]
+    },
+    {
+        "title": "Xbox Series X",
+        "uuid": "",
+        "price": "399.99",
+        "body": "The Xbox Series X is Microsoft's most powerful gaming console yet, designed to deliver a next-generation gaming experience like never before. With its cutting-edge hardware, including a custom AMD processor and RDNA 2 architecture, the Series X offers stunning 4K visuals at up to 120 frames per second, making games incredibly smooth and immersive. The console also features a high-speed SSD for faster load times, Quick Resume for seamlessly switching between multiple games, and backward compatibility with thousands of Xbox One, Xbox 360, and original Xbox games. With support for ray tracing, Dolby Atmos, and spatial audio, the Xbox Series X delivers a truly immersive gaming experience that's unparalleled.",
+        "image": "https://metro.co.uk/wp-content/uploads/2024/02/White-Xbox-Series-X-2b57.jpg?quality=90&strip=all",
+        "categories": [
+            "Windows"
+        ]
+    },
+    {
+        "title": "Microsoft Holo Lens",
+        "uuid": "",
+        "price": "5299.99",
+        "body": "The HoloLens is Microsoft's revolutionary mixed reality headset, blending the digital world with the real world to create immersive experiences for work, play, and learning. With its see-through holographic lenses, the HoloLens overlays digital content onto your surroundings, allowing you to interact with holograms in a natural way. Whether you're designing 3D models, collaborating with colleagues in a virtual space, or playing immersive games, the HoloLens offers endless possibilities. Powered by Windows Holographic, the HoloLens provides a familiar Windows interface, enabling developers to create innovative apps and experiences for users. With its comfortable fit, advanced sensors, and spatial sound technology, the HoloLens redefines how we interact with technology, opening up new avenues for creativity and productivity.",
+        "image": "https://variety.com/wp-content/uploads/2016/02/screenshot-2016-02-29-at-9-41-48-am.png?w=1000&h=563&crop=1",
+        "categories": [
+            "Windows"
+        ]
+    },
+    {
+        "title": "Nubia Low Back Office Chair",
+        "uuid": "",
+        "price": "1699.99",
+        "body": "The Nubia Low Back Office Chair combines style, comfort, and functionality, making it an ideal choice for any modern office. With its sleek and ergonomic design, this chair provides excellent lumbar support to help maintain proper posture and reduce strain on the lower back. The low back design allows for greater freedom of movement, while the padded seat and armrests ensure comfort during long hours of sitting. The chair also features a 360-degree swivel and smooth-rolling casters, allowing you to easily move around your workspace. Whether you're working at a desk or in a conference room, the Nubia Low Back Office Chair is a stylish and practical seating solution.",
+        "image": "https://www.roomservice360.com/media/catalog/product/n/u/nubia-low-back-office-chair-01.jpg",
+        "categories": [
+            "Gear"
+        ]
+    },
+    {
+        "title": "Uplift Standing Desk",
+        "uuid": "",
+        "price": "899.99",
+        "body": "The Uplift Standing Desk is a premium, height-adjustable desk designed to improve your workspace ergonomics and overall health. With its sturdy construction and smooth electric motor, you can easily transition between sitting and standing positions throughout the day. The desk offers a wide range of height adjustments to accommodate users of all heights, ensuring a comfortable and ergonomic working posture. The Uplift Standing Desk also features a spacious desktop, allowing you to organize your workstation with ease. Whether you're working from home or in a professional office setting, the Uplift Standing Desk is a versatile and practical solution for a healthier and more productive work environment.",
+        "image": "https://cdn11.bigcommerce.com/s-l85bzww3lo/products/890/images/28535/gallery-7-UPLIFT-Bamboo-Standing-Desk__41304.1707238526.1217.655.jpg?c=2",
+        "categories": [
+            "Gear"
+        ]
+    },
+    {
+        "title": "Nylavee",
+        "uuid": "",
+        "price": "199.99",
+        "body": "COMPUTER SPEAKERS FOR DESKTOP WITH SUBWOOFER: Enhanced with a built-in sub woofer for 80 watt peak power, this computer speaker set provides booming sound and a strong, loud bass for premium audio. Two drivers are designed with soft LED translucent lights that bring a vibrant look to your desk, office or home setup | 5 WATT DRIVERS for clear volume and listening",
+        "image": "https://m.media-amazon.com/images/I/71jplFSTE6L._AC_UF894,1000_QL80_.jpg",
+        "categories": [
+            "Gear"
+        ]
+    },
+    {
+        "title": "Tempur-Pedic Seat Cushion",
+        "uuid": "",
+        "price": "99.99",
+        "body": "The Tempur-Pedic Seat Cushion is a premium accessory designed to provide exceptional comfort and support for extended periods of sitting. Made from Tempur material, which is known for its pressure-relieving properties, this seat cushion conforms to your body's shape to reduce pressure points and promote better posture. Whether you're sitting at your desk, driving in your car, or attending a sporting event, the Tempur-Pedic Seat Cushion helps alleviate discomfort and fatigue, allowing you to sit comfortably for longer periods. The cushion is also durable and easy to clean, making it a practical and long-lasting addition to your seating arrangements.",
+        "image": "https://assets-www.tempurpedic.com/media/images/TP_New_Gallery_Hero_0015_SeatCushion.original_R.original.jpg",
+        "categories": [
+            "Gear"
+        ]
+    },
+    {
+        "title": "Vivid HDMI Cable",
+        "uuid": "",
+        "price": "19.99",
+        "body": "The HDMI Cable is an essential accessory for connecting your devices to a TV, monitor, or projector with HDMI ports. It delivers high-definition audio and video signals, ensuring a crisp and clear picture quality. The HDMI Cable supports various resolutions, including 4K, making it ideal for watching movies, gaming, and presenting content in professional settings.",
+        "image": "https://m.media-amazon.com/images/I/61hqsN2bBWL.jpg",
+        "categories": [
+            "Gear"
+        ]
+    }
+]

@@ -4,8 +4,5 @@ export type Product = {
   price: string;
   body: string;
   image: string;
-};
-
-export type Products = {
-  [key: string]: Product[];
+  categories: string[];
 };

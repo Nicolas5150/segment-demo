@@ -3,15 +3,15 @@ import { Box } from "@mui/material";
 import { getData } from "src/utils/getData";
 import { Ad } from "src/components/Ad";
 import { ArticleCarousel } from "src/components/ArticleCarousel";
-import { Ad as AdType } from "src/types/data/ad";
+import { Product as ProductType } from "src/types/data/product";
 import { Article as ArticleType } from "src/types/data/article";
 
 export function Home() {
   const articlesUrl = "/data/articles.json";
-  const adsUrl = "/data/ads.json";
+  const productsUrl = "/data/products.json";
 
   const [articleData, setArticleData] = useState<Map<string, ArticleType[]>>();
-  const [adData, setAdData] = useState<Map<string, AdType[]>>();
+  const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
   const initArticleData = async () => {
     const sortedSections = new Map();
@@ -32,20 +32,19 @@ export function Home() {
 
   const initAdData = async () => {
     const sortedSections = new Map();
-    const dataRetrieved = (await getData(adsUrl)) as AdType[];
-
-    dataRetrieved.forEach((ad) => {
-      ad.categories.forEach((category) => {
+    const dataRetrieved = (await getData(productsUrl)) as ProductType[];
+    dataRetrieved.forEach((article) => {
+      article.categories.forEach((category) => {
         const categoryData = sortedSections.get(category);
         if (categoryData !== undefined) {
-          sortedSections.set(category, [...categoryData, category]);
+          sortedSections.set(category, [...categoryData, article]);
         } else {
-          sortedSections.set(category, [category]);
+          sortedSections.set(category, [article]);
         }
       });
     });
     console.log(sortedSections);
-    setAdData(sortedSections);
+    setProductData(sortedSections);
   };
 
   useEffect(() => {
@@ -53,9 +52,25 @@ export function Home() {
     initAdData();
   }, []);
 
-  if (!articleData || !adData) {
+  if (!articleData || !productData) {
     return null;
   }
+
+  const articlesContent = Array.from(articleData!.entries()).map(
+    ([key, articles]) => (
+      <ArticleCarousel articles={articles} category={key} key={key} />
+    ),
+  );
+
+  const advertisementContent = Array.from(productData!.entries())
+    .map(([key, productList]) =>
+      productList.map((product) => (
+        <Ad currentCategory={key} key={key + product.title} product={product} />
+      )),
+    )
+    // remove once we get a better idea of the ad log with Twilio.
+    .flat()
+    .slice(0, 3);
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -67,9 +82,7 @@ export function Home() {
           maxHeight: "calc(100vh - 64px)",
         }}
       >
-        {Array.from(articleData!.entries()).map(([key, articles]) => (
-          <ArticleCarousel articles={articles} category={key} key={key} />
-        ))}
+        {articlesContent}
       </Box>
       <Box
         component="section"
@@ -81,11 +94,7 @@ export function Home() {
           borderLeft: "1px solid lightgrey",
         }}
       >
-        {Array.from(adData!.entries()).map(([key, adList]) =>
-          adList.map((ad) => (
-            <Ad ad={ad} currentCategory={key} key={key + ad.uuid} />
-          )),
-        )}
+        {advertisementContent}
       </Box>
     </Box>
   );
