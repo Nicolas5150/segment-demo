@@ -10,7 +10,6 @@ export function Main() {
         sx={{
           px: 2,
           maxWidth: "2060px",
-
           margin: "auto",
         }}
       >

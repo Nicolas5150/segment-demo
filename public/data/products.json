@@ -1,0 +1,42 @@
+{
+    "apple": [
+        {
+            "title": "iPhone 15",
+            "uuid": "",
+            "price": "1199.99",
+            "body": "Introducing the iPhone 15, Apple's latest innovation that seamlessly combines cutting-edge technology with elegant design. Featuring a sleek, durable ceramic shield front cover and aerospace-grade aluminum edges, the iPhone 15 is as stylish as it is robust. Powered by the new A17 Bionic chip, it delivers lightning-fast performance and efficiency, making multitasking, gaming, and streaming smoother than ever. The Super Retina XDR display offers stunning visuals with true-to-life colors, while the state-of-the-art camera system, including a 48MP main camera, captures professional-quality photos and videos.",
+            "image": "https://www.apple.com/v/iphone/home/bu/images/meta/iphone__ky2k6x5u6vue_og.png"
+        },
+        {
+            "title": "iPad Pro",
+            "uuid": "",
+            "price": "999.99",
+            "body": "The all-new iPad Pro packs astonishing power into an unbelievably thin, light, and portable design. Push the limits of what’s possible on iPad with a superportable 11-inch model and an expansive 13-inch model that is the thinnest product Apple has ever created. The new Ultra Retina XDR display introduces groundbreaking tandem OLED technology. Extreme brightness, incredibly precise contrast, and advanced technologies like ProMotion and True Tone give you a jaw-dropping visual experience. And you can use Reference Mode for color-accurate workflows.",
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-spaceblack-glossy-wificell?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1713697851258"
+        },
+        {
+            "title": "AirPods",
+            "uuid": "",
+            "price": "129.99",
+            "body": "AirPods Pro take the listening experience to a new level of individuality. Personalized Spatial Audio with dynamic head tracking works with all your devices to immerse you deeper in all-around-you sound.4 And Adaptive EQ accounts for the fit of AirPods Pro, so you hear every frequency just as it was intended.",
+            "image": "https://5.imimg.com/data5/ANDROID/Default/2023/5/308765434/SO/YS/KD/119910517/product-jpeg-1000x1000.jpg"
+        },
+        {
+            "title": "Apple Watch",
+            "uuid": "",
+            "price": "699.99",
+            "body": "Introducing the Apple Watch, the ultimate companion for a healthy and connected lifestyle. This sleek and stylish smartwatch boasts a durable, swim-proof design with a stunning Always-On Retina display for easy viewing in any light. Powered by the latest S6 SiP with a 64-bit dual-core processor, it offers fast and smooth performance for all your needs. The Apple Watch features advanced health and fitness tracking, including blood oxygen monitoring, ECG capabilities, and comprehensive workout metrics, helping you stay on top of your health goals. With built-in GPS, cellular connectivity, and a variety of customizable watch faces and bands, it seamlessly integrates into your daily routine",
+            "image": "https://www.apple.com/v/watch/bm/images/meta/watch-gps-lte__f3xmp4zpdka6_og.png"
+        },
+        {
+            "title": "Apple TV",
+            "uuid": "",
+            "price": "299.99",
+            "body": "Introducing the Apple TV, your gateway to a world of immersive entertainment. With its sleek design and powerful A12 Bionic chip, Apple TV delivers stunning 4K HDR visuals and immersive Dolby Atmos sound, transforming your living room into a cinematic experience. Enjoy access to a vast array of content, including Apple TV+, Netflix, Disney+, and more, all in one place. The intuitive tvOS interface and Siri Remote make navigating your favorite shows, movies, and games effortless. Plus, with AirPlay, you can easily share content from your iPhone, iPad, or Mac to your TV.",
+            "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJ6Aa1dcrkQA/v0/-1x-1.jpg"
+        }
+    ],
+    "android": [],
+    "windows": [],
+    "gear": []
+}

@@ -11,7 +11,7 @@ export function Ad({ ad, currentCategory }: AdProps) {
     <Box
       sx={{
         boxShadow: "2px 7px 10px lightgray",
-        m: 2,
+        ml: 2,
         height: "125px",
         p: 2,
         transition: "scale 200ms ease-in-out",
