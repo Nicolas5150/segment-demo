@@ -11,8 +11,6 @@ export function Nav() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        mb: 2,
-        py: 1,
         px: 2,
       }}
     >

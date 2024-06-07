@@ -33,9 +33,6 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         borderTop: "solid 1px lightgray",
         "&:first-of-type": {
           borderTop: "none",
-          "& h4": {
-            pt: 0,
-          },
         },
         "& .carousel-container": {
           mb: 4,

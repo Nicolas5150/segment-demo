@@ -21,10 +21,6 @@ export function Ad({ ad, currentCategory }: AdProps) {
           scale: "1.02",
           cursor: "pointer",
         },
-        "&:first-of-type": {
-          pt: 0,
-          mt: 0,
-        },
       }}
     >
       {ad.url}
