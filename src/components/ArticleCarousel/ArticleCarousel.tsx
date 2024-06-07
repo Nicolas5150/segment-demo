@@ -2,7 +2,6 @@ import Carousel from "react-multi-carousel";
 import { Box, Typography } from "@mui/material";
 import { Article } from "src/types/data/article";
 import "react-multi-carousel/lib/styles.css";
-import "./index.css";
 
 const responsive = {
   desktop: {
@@ -29,12 +28,19 @@ type ArticleCarouselProps = {
 
 export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
   return (
-    <Box sx={{ m: 2 }}>
-      <Typography
-        component="h4"
-        sx={{ borderBottom: "solid 1px lightgray", mb: 2, pb: 1 }}
-        variant="h4"
-      >
+    <Box
+      sx={{
+        borderTop: "solid 1px lightgray",
+        "& .carousel-container": {
+          mb: 4,
+          pb: 2,
+        },
+        "& .react-multiple-carousel__arrow": {
+          bottom: 0,
+        },
+      }}
+    >
+      <Typography component="h4" sx={{ pt: 2, pb: 1 }} variant="h4">
         {category}
       </Typography>
       <Carousel
@@ -57,10 +63,11 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
           <Box
             key={title}
             sx={{
+              display: "flex",
               boxShadow: "2px 7px 10px lightgray",
               m: 2,
-              mb: 6,
-              height: "425px",
+              mb: 8,
+              height: "350px",
               p: 2,
               transition: "scale 200ms ease-in-out",
               backfaceVisibility: "hidden",
@@ -69,10 +76,24 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
                 scale: "1.02",
                 cursor: "pointer",
               },
+              "&:first-of-type": {
+                ml: 1,
+              },
             }}
           >
             <Box>
-              <Typography component="h5" sx={{ height: "70px" }} variant="h5">
+              <Typography
+                component="h5"
+                sx={{
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
+                  height: "70px",
+                }}
+                variant="h5"
+              >
                 {title}
               </Typography>
               <Typography component="div">
@@ -86,8 +107,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
                 sx={{
                   objectFit: "cover",
                   width: "100%",
-                  height: "100%",
-                  maxWidth: { xs: 350, md: 350 },
+                  height: "175px",
                   py: 2,
                   display: "block",
                   margin: "auto",

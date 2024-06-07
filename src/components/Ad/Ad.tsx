@@ -12,8 +12,7 @@ export function Ad({ ad, currentCategory }: AdProps) {
       sx={{
         boxShadow: "2px 7px 10px lightgray",
         m: 2,
-        mb: 6,
-        height: "150px",
+        height: "125px",
         p: 2,
         transition: "scale 200ms ease-in-out",
         backfaceVisibility: "hidden",
@@ -21,6 +20,10 @@ export function Ad({ ad, currentCategory }: AdProps) {
         "&:hover": {
           scale: "1.02",
           cursor: "pointer",
+        },
+        "&:first-of-type": {
+          pt: 0,
+          mt: 0,
         },
       }}
     >
