@@ -9,7 +9,7 @@ export function Shop() {
 
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
-  const initArticleData = async () => {
+  const initProductData = async () => {
     const sortedSections = new Map();
     const dataRetrieved = (await getData(productsUrl)) as ProductType[];
     dataRetrieved.forEach((article) => {
@@ -27,7 +27,7 @@ export function Shop() {
   };
 
   useEffect(() => {
-    initArticleData();
+    initProductData();
   }, []);
 
   if (!productData) {

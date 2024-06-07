@@ -65,7 +65,7 @@ export function Home() {
   const advertisementContent = Array.from(productData!.entries())
     .map(([key, productList]) =>
       productList.map((product) => (
-        <Ad currentCategory={key} key={key + product.title} product={product} />
+        <Ad currentCategory={key} key={product.uuid} product={product} />
       )),
     )
     // remove once we get a better idea of the ad log with Twilio.

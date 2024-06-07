@@ -69,9 +69,9 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         transitionDuration={500}
       >
         {/* eslint-disable-next-line react/destructuring-assignment */}
-        {articles.map(({ title, author, image, body }) => (
+        {articles.map(({ title, author, image, body, uuid }) => (
           <Box
-            key={title}
+            key={uuid}
             sx={{
               display: "flex",
               boxShadow: "2px 7px 10px lightgray",
