@@ -13,6 +13,7 @@ export function Nav() {
         alignItems: "center",
         mb: 2,
         py: 1,
+        px: 2,
       }}
     >
       <Box
@@ -52,7 +53,7 @@ export function Nav() {
           }}
         >
           {navItems.map((navItem) => (
-            <li>
+            <li key={navItem.name}>
               <Typography>
                 <Link to={navItem.path}>{navItem.name}</Link>
               </Typography>
