@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Card } from "src/components/Card";
 import { Product as ProductType } from "src/types/data/product";
 
 type ProductProps = {
@@ -11,28 +12,17 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
   const { title, body, image, price, uuid } = product;
 
   return (
-    <Box
-      component={Link}
-      data-category={currentCategory}
+    <Card
+      cardType={Link}
+      currentCategory={currentCategory}
       sx={{
-        backfaceVisibility: "hidden",
-        boxShadow: "2px 7px 10px lightgray",
-        color: "black",
-        display: "flex",
         height: "350px",
         m: 2,
         mb: 8,
         maxWidth: "450px",
         p: 2,
-        textDecoration: "none",
-        transform: "perspective(1px) translateZ(0)",
-        transition: "scale 200ms ease-in-out",
         "&:first-of-type": {
           ml: 1,
-        },
-        "&:hover": {
-          cursor: "pointer",
-          scale: "1.02",
         },
       }}
       to={`/product/${uuid}`}
@@ -81,6 +71,6 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
           {body}
         </Typography>
       </Box>
-    </Box>
+    </Card>
   );
 }

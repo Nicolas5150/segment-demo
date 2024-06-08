@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Card } from "src/components/Card";
 import { Article } from "src/types/data/article";
 import "react-multi-carousel/lib/styles.css";
 
@@ -70,27 +71,17 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         transitionDuration={500}
       >
         {articles.map(({ title, author, image, body, uuid }) => (
-          <Box
-            component={Link}
+          <Card
+            cardType={Link}
+            currentCategory={category}
             key={uuid}
             sx={{
-              backfaceVisibility: "hidden",
-              boxShadow: "2px 7px 10px lightgray",
-              color: "black",
-              display: "flex",
               height: "350px",
               m: 2,
               mb: 8,
               p: 2,
-              textDecoration: "none",
-              transform: "perspective(1px) translateZ(0)",
-              transition: "scale 200ms ease-in-out",
               "&:first-of-type": {
                 ml: 1,
-              },
-              "&:hover": {
-                cursor: "pointer",
-                scale: "1.02",
               },
             }}
             to={`/article/${uuid}`}
@@ -139,7 +130,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
                 {body}
               </Typography>
             </Box>
-          </Box>
+          </Card>
         ))}
       </Carousel>
     </Box>

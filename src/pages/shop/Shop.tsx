@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import { ProductCard } from "src/components/productCard";
+import { ProductCard } from "src/components/ProductCard";
 import { getData } from "src/utils/getData";
 import { Product as ProductType } from "src/types/data/product";
 

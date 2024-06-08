@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
+import { AdCard } from "src/components/AdCard";
 import { getData } from "src/utils/getData";
-import { Ad } from "src/components/Ad";
 import { ArticleCarousel } from "src/components/ArticleCarousel";
 import { Product as ProductType } from "src/types/data/product";
 import { Article as ArticleType } from "src/types/data/article";
@@ -63,7 +63,7 @@ export function Home() {
   const advertisementContent = Array.from(productData!.entries())
     .map(([key, productList]) =>
       productList.map((product) => (
-        <Ad currentCategory={key} key={product.uuid} product={product} />
+        <AdCard currentCategory={key} key={product.uuid} product={product} />
       )),
     )
     // remove once we get a better idea of the ad log with Twilio.

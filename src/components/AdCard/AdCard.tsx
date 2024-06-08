@@ -1,40 +1,30 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Card } from "src/components/Card";
 import { Product as ProductType } from "src/types/data/product";
 
-type AdProps = {
+type AdCardProps = {
   product: ProductType;
   currentCategory: string;
 };
 
-export function Ad({ product, currentCategory }: AdProps) {
+export function AdCard({ product, currentCategory }: AdCardProps) {
   const { title, image, price, uuid } = product;
   return (
-    <Box
-      component={Link}
+    <Card
+      cardType={Link}
+      currentCategory={currentCategory}
       sx={{
-        color: "black",
-        textDecoration: "none",
+        ml: 2,
+        mb: 2,
+        p: 2,
+        "&:first-of-type": {
+          mt: 2,
+        },
       }}
       to={`/product/${uuid}`}
     >
-      <Box
-        sx={{
-          backfaceVisibility: "hidden",
-          boxShadow: "2px 7px 10px lightgray",
-          ml: 2,
-          p: 2,
-          transform: "perspective(1px) translateZ(0)",
-          transition: "scale 200ms ease-in-out",
-          "&:first-of-type": {
-            mt: 2,
-          },
-          "&:hover": {
-            cursor: "pointer",
-            scale: "1.02",
-          },
-        }}
-      >
+      <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Typography
           component="h6"
           sx={{
@@ -67,6 +57,6 @@ export function Ad({ product, currentCategory }: AdProps) {
           }}
         />
       </Box>
-    </Box>
+    </Card>
   );
 }

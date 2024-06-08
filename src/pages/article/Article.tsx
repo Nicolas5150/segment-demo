@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { getData } from "src/utils/getData";
-import { Ad } from "src/components/Ad";
+import { AdCard } from "src/components/AdCard";
 import { Article as ArticleType } from "src/types/data/article";
 import { Product as ProductType } from "src/types/data/product";
 
@@ -51,7 +51,7 @@ export function Article() {
   const advertisementContent = Array.from(productData!.entries())
     .map(([key, productList]) =>
       productList.map((product) => (
-        <Ad currentCategory={key} key={product.uuid} product={product} />
+        <AdCard currentCategory={key} key={product.uuid} product={product} />
       )),
     )
     .flat()
