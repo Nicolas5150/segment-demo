@@ -40,7 +40,12 @@ export function Login() {
         variant="filled"
         onChange={(e) => setUsernameValue(e.target.value)}
       />
-      <TextField id="filled-basic" label="Password" variant="filled" />
+      <TextField
+        id="filled-basic"
+        label="Password"
+        type="password"
+        variant="filled"
+      />
       <Box sx={{ display: "flex", gap: 4, marginLeft: "auto" }}>
         <Button variant="outlined" onClick={logUserIn}>
           Sign up
