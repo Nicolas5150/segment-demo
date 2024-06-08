@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Article } from "src/types/data/article";
 import "react-multi-carousel/lib/styles.css";
 
@@ -71,8 +72,11 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         {/* eslint-disable-next-line react/destructuring-assignment */}
         {articles.map(({ title, author, image, body, uuid }) => (
           <Box
+            component={Link}
             key={uuid}
             sx={{
+              color: "black",
+              textDecoration: "none",
               display: "flex",
               boxShadow: "2px 7px 10px lightgray",
               m: 2,
@@ -90,6 +94,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
                 ml: 1,
               },
             }}
+            to={`/article/${uuid}`}
           >
             <Box>
               <Typography

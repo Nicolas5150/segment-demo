@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Product as ProductType } from "src/types/data/product";
 
 type ProductProps = {
@@ -7,11 +8,14 @@ type ProductProps = {
 };
 
 export function ProductCard({ product, currentCategory }: ProductProps) {
-  const { title, body, image, price } = product;
+  const { title, body, image, price, uuid } = product;
   console.log(currentCategory);
   return (
     <Box
+      component={Link}
       sx={{
+        color: "black",
+        textDecoration: "none",
         display: "flex",
         boxShadow: "2px 7px 10px lightgray",
         m: 2,
@@ -30,6 +34,7 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
           ml: 1,
         },
       }}
+      to={`/product/${uuid}`}
     >
       <Box>
         <Typography
