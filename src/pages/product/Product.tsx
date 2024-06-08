@@ -32,15 +32,15 @@ export function Product() {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
-        m: "auto",
-        mt: 6,
         flexDirection: "column",
         gap: 6,
+        justifyContent: "center",
+        m: "auto",
         maxWidth: "1080px",
+        mt: 6,
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 12 }}>
+      <Box sx={{ display: "flex", gap: 12, justifyContent: "center" }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
           <Typography component="h3" variant="h3">
             {title}
@@ -66,19 +66,19 @@ export function Product() {
           component="img"
           src={image}
           sx={{
-            objectFit: "cover",
-            maxWidth: "500px",
-            width: "100%",
-            height: "475px",
-            display: "block",
             border: "solid 1px lightgrey",
+            display: "block",
+            height: "475px",
+            maxWidth: "500px",
+            objectFit: "cover",
+            width: "100%",
           }}
         />
       </Box>
       <Box
         sx={{
-          display: "flex",
           alignSelf: "center",
+          display: "flex",
           gap: 6,
           maxWidth: "1080px",
         }}

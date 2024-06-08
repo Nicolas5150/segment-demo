@@ -8,9 +8,9 @@ export function Main() {
       <Nav />
       <Box
         sx={{
-          px: 2,
-          maxWidth: "2060px",
           margin: "auto",
+          maxWidth: "2060px",
+          px: 2,
         }}
       >
         <Outlet />

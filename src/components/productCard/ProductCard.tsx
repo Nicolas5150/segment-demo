@@ -9,29 +9,30 @@ type ProductProps = {
 
 export function ProductCard({ product, currentCategory }: ProductProps) {
   const { title, body, image, price, uuid } = product;
-  console.log(currentCategory);
+
   return (
     <Box
       component={Link}
+      data-category={currentCategory}
       sx={{
-        color: "black",
-        textDecoration: "none",
-        display: "flex",
+        backfaceVisibility: "hidden",
         boxShadow: "2px 7px 10px lightgray",
+        color: "black",
+        display: "flex",
+        height: "350px",
         m: 2,
         mb: 8,
-        height: "350px",
         maxWidth: "450px",
         p: 2,
-        transition: "scale 200ms ease-in-out",
-        backfaceVisibility: "hidden",
+        textDecoration: "none",
         transform: "perspective(1px) translateZ(0)",
-        "&:hover": {
-          scale: "1.02",
-          cursor: "pointer",
-        },
+        transition: "scale 200ms ease-in-out",
         "&:first-of-type": {
           ml: 1,
+        },
+        "&:hover": {
+          cursor: "pointer",
+          scale: "1.02",
         },
       }}
       to={`/product/${uuid}`}
@@ -40,12 +41,12 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
         <Typography
           component="h5"
           sx={{
+            display: "-webkit-box",
+            height: "70px",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            display: "-webkit-box",
-            WebkitLineClamp: "2",
             WebkitBoxOrient: "vertical",
-            height: "70px",
+            WebkitLineClamp: "2",
           }}
           variant="h5"
         >
@@ -60,21 +61,21 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
           component="img"
           src={image}
           sx={{
-            objectFit: "cover",
-            width: "100%",
-            height: "175px",
-            py: 2,
             display: "block",
+            height: "175px",
             margin: "auto",
+            objectFit: "cover",
+            py: 2,
+            width: "100%",
           }}
         />
         <Typography
           sx={{
+            display: "-webkit-box",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            display: "-webkit-box",
-            WebkitLineClamp: "2",
             WebkitBoxOrient: "vertical",
+            WebkitLineClamp: "2",
           }}
         >
           {body}

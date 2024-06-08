@@ -26,7 +26,6 @@ export function Home() {
         }
       });
     });
-    console.log(sortedSections);
     setArticleData(sortedSections);
   };
 
@@ -43,7 +42,6 @@ export function Home() {
         }
       });
     });
-    console.log(sortedSections);
     setProductData(sortedSections);
   };
 
@@ -78,8 +76,8 @@ export function Home() {
         component="section"
         sx={{
           flex: "1 1 auto",
-          overflowY: "auto",
           maxHeight: "calc(100vh - 64px)",
+          overflowY: "auto",
         }}
       >
         {articlesContent}
@@ -87,11 +85,11 @@ export function Home() {
       <Box
         component="section"
         sx={{
+          borderLeft: "1px solid lightgrey",
           flex: "0 0 auto",
-          width: 250,
           position: "sticky",
           top: 0,
-          borderLeft: "1px solid lightgrey",
+          width: 250,
         }}
       >
         {advertisementContent}

@@ -6,23 +6,21 @@ import { Product as ProductType } from "src/types/data/product";
 
 export function Shop() {
   const productsUrl = "/data/products.json";
-
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
   const initProductData = async () => {
     const sortedSections = new Map();
     const dataRetrieved = (await getData(productsUrl)) as ProductType[];
-    dataRetrieved.forEach((article) => {
-      article.categories.forEach((category) => {
+    dataRetrieved.forEach((product) => {
+      product.categories.forEach((category) => {
         const categoryData = sortedSections.get(category);
         if (categoryData !== undefined) {
-          sortedSections.set(category, [...categoryData, article]);
+          sortedSections.set(category, [...categoryData, product]);
         } else {
-          sortedSections.set(category, [article]);
+          sortedSections.set(category, [product]);
         }
       });
     });
-    console.log(sortedSections);
     setProductData(sortedSections);
   };
 
@@ -36,21 +34,14 @@ export function Shop() {
 
   return (
     <Box>
-      <Typography
-        component="h4"
-        sx={{
-          pt: 2,
-          pb: 1,
-        }}
-        variant="h4"
-      >
+      <Typography component="h4" sx={{ pb: 1, pt: 2 }} variant="h4">
         All Products
       </Typography>
       <Box
         component="section"
         sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
       >
-        {Array.from(productData!.entries()).map(([key, productList]) =>
+        {Array.from(productData.entries()).map(([key, productList]) =>
           productList.map((product) => (
             <ProductCard
               currentCategory={key}

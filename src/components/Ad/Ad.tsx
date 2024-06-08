@@ -20,30 +20,30 @@ export function Ad({ product, currentCategory }: AdProps) {
     >
       <Box
         sx={{
+          backfaceVisibility: "hidden",
           boxShadow: "2px 7px 10px lightgray",
           ml: 2,
           p: 2,
-          transition: "scale 200ms ease-in-out",
-          backfaceVisibility: "hidden",
           transform: "perspective(1px) translateZ(0)",
-          "&:hover": {
-            scale: "1.02",
-            cursor: "pointer",
-          },
+          transition: "scale 200ms ease-in-out",
           "&:first-of-type": {
             mt: 2,
+          },
+          "&:hover": {
+            cursor: "pointer",
+            scale: "1.02",
           },
         }}
       >
         <Typography
           component="h6"
           sx={{
+            display: "-webkit-box",
+            fontSize: ".95rem",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            display: "-webkit-box",
-            WebkitLineClamp: "2",
             WebkitBoxOrient: "vertical",
-            fontSize: ".95rem",
+            WebkitLineClamp: "2",
           }}
           variant="h6"
         >
@@ -56,17 +56,17 @@ export function Ad({ product, currentCategory }: AdProps) {
         <Box
           alt={title}
           component="img"
-          data-cateory={currentCategory}
+          data-category={currentCategory}
           src={image}
           sx={{
+            display: "block",
+            height: "75px",
+            margin: "auto",
             objectFit: "cover",
             width: "100%",
-            height: "75px",
-            display: "block",
-            margin: "auto",
           }}
         />
-      </Box>{" "}
+      </Box>
     </Box>
   );
 }

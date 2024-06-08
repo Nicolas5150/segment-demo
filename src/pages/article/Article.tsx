@@ -36,7 +36,6 @@ export function Article() {
         }
       });
     });
-    console.log(sortedSections);
     setProductData(sortedSections);
   };
 
@@ -55,7 +54,6 @@ export function Article() {
         <Ad currentCategory={key} key={product.uuid} product={product} />
       )),
     )
-    // remove once we get a better idea of the ad log with Twilio.
     .flat()
     .slice(0, 3);
 
@@ -66,43 +64,41 @@ export function Article() {
         component="section"
         sx={{
           flex: "1 1 auto",
-          overflowY: "auto",
           maxHeight: "calc(100vh - 64px)",
+          overflowY: "auto",
         }}
       >
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
-            m: "auto",
-            mt: 6,
             flexDirection: "column",
             gap: 6,
+            justifyContent: "center",
+            m: "auto",
             maxWidth: "1080px",
+            mt: 6,
           }}
         >
-          <Box>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-              <Typography component="h3" variant="h3">
-                {title}
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            <Typography component="h3" variant="h3">
+              {title}
+            </Typography>
+            <Box>
+              <Typography component="div">
+                <b>Categories: </b>
               </Typography>
-              <Box>
-                <Typography component="div">
-                  <b>Categories: </b>
+              {categories.map((category) => (
+                <Typography component="div" key={category}>
+                  {category}
                 </Typography>
-                {categories.map((category) => (
-                  <Typography component="div" key={category}>
-                    {category}
-                  </Typography>
-                ))}
-              </Box>
+              ))}
             </Box>
           </Box>
           <Box
             sx={{
+              alignSelf: "center",
               display: "flex",
               flexDirection: "column",
-              alignSelf: "center",
               gap: 6,
               maxWidth: "1080px",
             }}
@@ -112,11 +108,11 @@ export function Article() {
               component="img"
               src={image}
               sx={{
+                border: "solid 1px lightgrey",
+                display: "block",
+                maxHeight: "475px",
                 objectFit: "cover",
                 width: "100%",
-                maxHeight: "475px",
-                display: "block",
-                border: "solid 1px lightgrey",
               }}
             />
             <Typography component="div">{body}</Typography>
@@ -126,11 +122,11 @@ export function Article() {
       <Box
         component="section"
         sx={{
+          borderLeft: "1px solid lightgrey",
           flex: "0 0 auto",
-          width: 250,
           position: "sticky",
           top: 0,
-          borderLeft: "1px solid lightgrey",
+          width: 250,
         }}
       >
         {advertisementContent}

@@ -3,11 +3,11 @@ import { Product as ProductPage } from "src/pages/product";
 
 export const otherRoutes = [
   {
-    path: "/article/:uuid",
     element: <ArticlePage />,
+    path: "/article/:uuid",
   },
   {
-    path: "/product/:uuid",
     element: <ProductPage />,
+    path: "/product/:uuid",
   },
 ];

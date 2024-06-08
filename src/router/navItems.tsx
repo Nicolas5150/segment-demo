@@ -4,18 +4,18 @@ import { Login as LoginPage } from "src/pages/login";
 
 export const navItems = [
   {
-    path: "/",
-    name: "Home",
     element: <HomePage />,
+    name: "Home",
+    path: "/",
   },
   {
-    path: "/shop",
-    name: "Shop",
     element: <ShopPage />,
+    name: "Shop",
+    path: "/shop",
   },
   {
-    path: "/login",
-    name: "Login",
     element: <LoginPage />,
+    name: "Login",
+    path: "/login",
   },
 ];

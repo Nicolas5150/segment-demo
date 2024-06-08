@@ -8,17 +8,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
 };
 
@@ -47,8 +47,8 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
       <Typography
         component="h4"
         sx={{
-          pt: 2,
           pb: 1,
+          pt: 2,
         }}
         variant="h4"
       >
@@ -58,7 +58,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         infinite
         keyBoardControl
         showDots
-        ssr // means to render carousel on server-side.
+        ssr
         autoPlaySpeed={1000}
         containerClass="carousel-container"
         customTransition="all .5"
@@ -69,29 +69,28 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
         swipeable={false}
         transitionDuration={500}
       >
-        {/* eslint-disable-next-line react/destructuring-assignment */}
         {articles.map(({ title, author, image, body, uuid }) => (
           <Box
             component={Link}
             key={uuid}
             sx={{
-              color: "black",
-              textDecoration: "none",
-              display: "flex",
+              backfaceVisibility: "hidden",
               boxShadow: "2px 7px 10px lightgray",
+              color: "black",
+              display: "flex",
+              height: "350px",
               m: 2,
               mb: 8,
-              height: "350px",
               p: 2,
-              transition: "scale 200ms ease-in-out",
-              backfaceVisibility: "hidden",
+              textDecoration: "none",
               transform: "perspective(1px) translateZ(0)",
-              "&:hover": {
-                scale: "1.02",
-                cursor: "pointer",
-              },
+              transition: "scale 200ms ease-in-out",
               "&:first-of-type": {
                 ml: 1,
+              },
+              "&:hover": {
+                cursor: "pointer",
+                scale: "1.02",
               },
             }}
             to={`/article/${uuid}`}
@@ -100,12 +99,12 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
               <Typography
                 component="h5"
                 sx={{
+                  display: "-webkit-box",
+                  height: "70px",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "2",
                   WebkitBoxOrient: "vertical",
-                  height: "70px",
+                  WebkitLineClamp: "2",
                 }}
                 variant="h5"
               >
@@ -120,21 +119,21 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
                 component="img"
                 src={image}
                 sx={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "175px",
-                  py: 2,
                   display: "block",
+                  height: "175px",
                   margin: "auto",
+                  objectFit: "cover",
+                  py: 2,
+                  width: "100%",
                 }}
               />
               <Typography
                 sx={{
+                  display: "-webkit-box",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  display: "-webkit-box",
-                  WebkitLineClamp: "2",
                   WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: "2",
                 }}
               >
                 {body}

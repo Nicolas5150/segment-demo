@@ -7,10 +7,10 @@ export function Nav() {
     <Box
       component="nav"
       sx={{
+        alignItems: "center",
         boxShadow: "2px 7px 10px lightgray",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
         px: 2,
       }}
     >
@@ -18,8 +18,8 @@ export function Nav() {
         sx={{
           alignItems: "center",
           display: "flex",
-          justifyContent: "space-between",
           flexWrap: "wrap",
+          justifyContent: "space-between",
           maxWidth: "2060px",
           width: "100%",
         }}
@@ -40,9 +40,9 @@ export function Nav() {
             listStyleType: "none",
             padding: 0,
             a: {
-              textDecoration: "none",
               color: "black",
               fontSize: "1.1rem",
+              textDecoration: "none",
               ":hover, :active, :focus": {
                 borderBottom: "solid 2px black",
                 outline: "none",
