@@ -1,8 +1,36 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { navItems } from "src/router/navItems";
+import { NavItem as NavItemType } from "src/types/router/navItem";
 
 export function Nav() {
+  const segmentUser = "segment-user";
+  const user = localStorage.getItem(segmentUser);
+
+  const updateNavItemName = (navItemName: string) => {
+    if (navItemName === "Login" && user) {
+      return "Logout";
+    }
+    return navItemName;
+  };
+
+  const checkForOverRidingNav = (navItem: NavItemType) => {
+    if (navItem.name === "Login" && user) {
+      return (
+        <Link
+          to="/"
+          onClick={() => {
+            localStorage.removeItem(segmentUser);
+            window.location.reload();
+          }}
+        >
+          Logout
+        </Link>
+      );
+    }
+    return <Link to={navItem.path}>{updateNavItemName(navItem.name)}</Link>;
+  };
+
   return (
     <Box
       component="nav"
@@ -52,9 +80,7 @@ export function Nav() {
         >
           {navItems.map((navItem) => (
             <li key={navItem.name}>
-              <Typography>
-                <Link to={navItem.path}>{navItem.name}</Link>
-              </Typography>
+              <Typography>{checkForOverRidingNav(navItem)}</Typography>
             </li>
           ))}
         </Box>
