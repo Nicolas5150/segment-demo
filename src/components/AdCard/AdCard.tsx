@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Card } from "src/components/Card";
 import { Product as ProductType } from "src/types/data/product";
+import { adTracked } from "src/utils/segment/track/adTracked";
 
 type AdCardProps = {
   product: ProductType;
@@ -23,6 +24,9 @@ export function AdCard({ product, currentCategory }: AdCardProps) {
         },
       }}
       to={`/product/${uuid}`}
+      onClickHandler={() =>
+        adTracked({ category: currentCategory, title, uuid })
+      }
     >
       <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Typography

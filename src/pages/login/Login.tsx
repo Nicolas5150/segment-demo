@@ -1,6 +1,7 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { initId } from "src/utils/segment/identify/initId";
 
 export function Login() {
   const segmentUser = "segment-user";
@@ -14,8 +15,8 @@ export function Login() {
 
   const logUserIn = () => {
     localStorage.setItem(segmentUser, userNameValue);
-    navigate("/");
-    window.location.reload();
+    initId(userNameValue);
+    window.location.href = "/";
   };
 
   return (
@@ -34,14 +35,14 @@ export function Login() {
         Login / Sign up
       </Typography>
       <TextField
-        id="filled-basic"
+        id="username-login"
         label="Username"
         value={userNameValue}
         variant="filled"
         onChange={(e) => setUsernameValue(e.target.value)}
       />
       <TextField
-        id="filled-basic"
+        id="password-login"
         label="Password"
         type="password"
         variant="filled"

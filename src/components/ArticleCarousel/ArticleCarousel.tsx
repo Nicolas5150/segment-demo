@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Card } from "src/components/Card";
+import { articleTracked } from "src/utils/segment/track/articleTracked";
 import { Article } from "src/types/data/article";
 import "react-multi-carousel/lib/styles.css";
 
@@ -85,6 +86,7 @@ export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
               },
             }}
             to={`/article/${uuid}`}
+            onClickHandler={() => articleTracked({ category, title, uuid })}
           >
             <Box>
               <Typography

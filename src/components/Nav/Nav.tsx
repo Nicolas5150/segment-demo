@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { unsetId } from "src/utils/segment/identify/unsetId";
 import { navItems } from "src/router/navItems";
 import { NavItem as NavItemType } from "src/types/router/navItem";
 
@@ -17,15 +18,15 @@ export function Nav() {
   const checkForOverRidingNav = (navItem: NavItemType) => {
     if (navItem.name === "Login" && user) {
       return (
-        <Link
-          to="/"
+        <a
+          href="/"
           onClick={() => {
             localStorage.removeItem(segmentUser);
-            window.location.reload();
+            unsetId();
           }}
         >
           Logout
-        </Link>
+        </a>
       );
     }
     return <Link to={navItem.path}>{updateNavItemName(navItem.name)}</Link>;

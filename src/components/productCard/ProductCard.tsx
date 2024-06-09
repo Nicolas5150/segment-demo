@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Card } from "src/components/Card";
+import { productTracked } from "src/utils/segment/track/productTracked";
 import { Product as ProductType } from "src/types/data/product";
 
 type ProductProps = {
@@ -26,6 +27,9 @@ export function ProductCard({ product, currentCategory }: ProductProps) {
         },
       }}
       to={`/product/${uuid}`}
+      onClickHandler={() =>
+        productTracked({ category: currentCategory, title, uuid })
+      }
     >
       <Box>
         <Typography

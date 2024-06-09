@@ -7,6 +7,7 @@ type CardProps = {
     | typeof Link;
   currentCategory: string;
   children: React.ReactNode;
+  onClickHandler?: () => void;
   sx?: {};
   to?: string;
 };
@@ -15,6 +16,7 @@ export function Card({
   cardType = Link,
   children,
   currentCategory,
+  onClickHandler,
   sx,
   to,
 }: CardProps) {
@@ -37,6 +39,7 @@ export function Card({
         },
         ...sx,
       }}
+      onClick={() => onClickHandler?.()}
       {...(cardType === Link ? { to } : {})}
     >
       {children}
