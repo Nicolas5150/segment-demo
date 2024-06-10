@@ -1,14 +1,9 @@
-/**
- * Asynchronously fetch data from the specified URL.
- *
- * @param {string} url - The URL to fetch data from.
- * @returns {Promise<*>} A Promise that resolves to the parsed JSON response if the request is successful.
- *                      If the request fails or there's an error, it returns null.
- * @throws {Error} If the request to the specified URL fails (e.g., non-2xx HTTP status code).
- */
-export async function getData(url: string): Promise<unknown> {
+export async function getData(
+  url: string,
+  options?: unknown,
+): Promise<unknown> {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, options as RequestInit);
     if (!res.ok) {
       throw new Error(`Request failed: ${res.status} - ${res.statusText}`);
     }

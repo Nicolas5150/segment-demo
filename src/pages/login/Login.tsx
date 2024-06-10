@@ -15,7 +15,7 @@ export function Login() {
 
   const logUserIn = () => {
     localStorage.setItem(segmentUser, userNameValue);
-    initId(userNameValue);
+    initId(userNameValue, { email: userNameValue, name: userNameValue });
     window.location.href = "/";
   };
 
