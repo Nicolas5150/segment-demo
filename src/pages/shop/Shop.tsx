@@ -5,10 +5,11 @@ import { getData } from "src/utils/getData";
 import { Product as ProductType } from "src/types/data/product";
 
 export function Shop() {
-  const productsUrl = "/data/products.json";
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
+  // Set the main section product cards
   const initProductData = async () => {
+    const productsUrl = "/data/products.json";
     const sortedSections = new Map();
     const dataRetrieved = (await getData(productsUrl)) as ProductType[];
     dataRetrieved.forEach((product) => {

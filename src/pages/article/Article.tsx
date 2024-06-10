@@ -2,17 +2,30 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { getData } from "src/utils/getData";
-import { AdCard } from "src/components/AdCard";
+import { getAdDataSorted } from "src/utils/helpers/getAdDataSorted";
+import { getMostFrequentEventCategory } from "src/utils/helpers/getMostFrequentEventCategory";
+import { renderAdvertisements } from "src/utils/genericRender/renderAdvertisements";
 import { Article as ArticleType } from "src/types/data/article";
 import { Product as ProductType } from "src/types/data/product";
 
 export function Article() {
   const { uuid } = useParams();
   const articlesUrl = "/data/articles.json";
-  const productsUrl = "/data/products.json";
   const [articleData, setArticleData] = useState<ArticleType>();
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
+  const [mostFrequentCategory, setMostFrequentCategory] = useState<string>("");
 
+  // Get the most frequent category type - ex: "Apple", "Android", "ETC"
+  const getEventData = async () => {
+    setMostFrequentCategory(await getMostFrequentEventCategory());
+  };
+
+  // Set the right rail ads.
+  const initAdData = async () => {
+    setProductData(await getAdDataSorted());
+  };
+
+  // Set the main section article
   const initArticleData = async () => {
     const dataRetrieved = (await getData(articlesUrl)) as ArticleType[];
     const product = dataRetrieved.find(
@@ -23,39 +36,15 @@ export function Article() {
     }
   };
 
-  const initAdData = async () => {
-    const sortedSections = new Map();
-    const dataRetrieved = (await getData(productsUrl)) as ProductType[];
-    dataRetrieved.forEach((article) => {
-      article.categories.forEach((category) => {
-        const categoryData = sortedSections.get(category);
-        if (categoryData !== undefined) {
-          sortedSections.set(category, [...categoryData, article]);
-        } else {
-          sortedSections.set(category, [article]);
-        }
-      });
-    });
-    setProductData(sortedSections);
-  };
-
   useEffect(() => {
     initArticleData();
     initAdData();
+    getEventData();
   }, []);
 
   if (!articleData || !productData) {
     return null;
   }
-
-  const advertisementContent = Array.from(productData!.entries())
-    .map(([key, productList]) =>
-      productList.map((product) => (
-        <AdCard currentCategory={key} key={product.uuid} product={product} />
-      )),
-    )
-    .flat()
-    .slice(0, 3);
 
   const { title, image, categories, body } = articleData;
   return (
@@ -129,7 +118,7 @@ export function Article() {
           width: 250,
         }}
       >
-        {advertisementContent}
+        {renderAdvertisements(productData, mostFrequentCategory)}
       </Box>
     </Box>
   );
