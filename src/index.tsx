@@ -1,5 +1,4 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import { Container, createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import "./index.css";
 import { browserRouter } from "src/router/browserRouter";
@@ -15,13 +14,7 @@ declare global {
 }
 
 function App() {
-  return (
-    <React.StrictMode>
-      <RouterProvider router={browserRouter} />
-    </React.StrictMode>
-  );
+  return <RouterProvider router={browserRouter} />;
 }
 
-ReactDOM.createRoot(
-  document.getElementById("root") as ReactDOM.Container,
-).render(<App />);
+createRoot(document.getElementById("root") as Container).render(<App />);
