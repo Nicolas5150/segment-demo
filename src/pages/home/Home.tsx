@@ -13,7 +13,6 @@ export function Home() {
   const [articleData, setArticleData] = useState<Map<string, ArticleType[]>>();
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
-  /*
   const getEventData = async () => {
     const eventDataUrl =
       "http://localhost:3001/api/events/newUser/Article Viewed";
@@ -21,7 +20,6 @@ export function Home() {
     // eslint-disable-next-line no-console
     console.log("Article Viewed Events:", dataRetrieved);
   };
-  */
 
   const initArticleData = async () => {
     const sortedSections = new Map();
@@ -58,7 +56,7 @@ export function Home() {
   useEffect(() => {
     initArticleData();
     initAdData();
-    // getEventData();
+    getEventData();
   }, []);
 
   if (!articleData || !productData) {

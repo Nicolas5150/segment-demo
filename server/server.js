@@ -17,7 +17,7 @@ app.use(
 app.options("*", cors());
 
 const token =
-  "DcpD8IcILzwLoLuaodk6d8hj25IOHhql5uMzRthOOXn3-U8psRjgjRCrddUngRhrrJYwYD2_DgFpncF0z1hIoPbYD-I95F38_d0rxn-BS2A92e7cF3TJ42Rpx4nrPW6rK_1ZfaPRgvzmkfZJF0lF_sXdA3JfJ0vc3Ix7KNLub5cBcr0qu17O47P6nwj04bI4UpSjQCih-j1zGATj3KetX8Esu2bGlOLDntJ6BTnyVb328-PzduS658sODfaxpF-_TBw16J6i8ewNFbQZL-RxqNBCOxI=";
+  "5j1Ofrks1KV0To-pTMGnNO4c6KIXYdEktM74CFEb-DmJ4M0pTDWJEl9jn0J0rxblAdaK4tcDfd7MCwQZ-clDyd00fLqDXhsGIlWpV4u9k3n70J_rx7GcfKJXl13YOlRj9Pv5C-BWrUAq-n4w6PXdd-jBg1NL0_GW9h63S0QAgu7AmNRZgSsaR1KGZ6k_p3E8bXrpr821ZX2k4N62knXyV6Mbh4crUmICQgfHiFGQwDfLYxOGGzX1PgCBhoNfdkCiHMaLyXI9srl5zdTtj7PqMmvDeVU=";
 
 app.get("/api/events/:userId/:eventName", async (req, res) => {
   const { userId, eventName } = req.params;
