@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { getData } from "src/utils/getData";
-import { getMostFrequentEventCategory } from "src/utils/helpers/getMostFrequentEventCategory";
+import { getMostFrequentCategory } from "src/utils/helpers/getMostFrequentCategory";
 import { getAdDataSorted } from "src/utils/helpers/getAdDataSorted";
 import { renderAdvertisements } from "src/utils/genericRender/renderAdvertisements";
 import { renderArticles } from "src/utils/genericRender/renderArticles";
@@ -15,7 +15,7 @@ export function Home() {
 
   // Get the most frequent category type - ex: "Apple", "Android", "ETC"
   const getEventData = async () => {
-    setMostFrequentCategory(await getMostFrequentEventCategory());
+    setMostFrequentCategory(await getMostFrequentCategory({ byTrait: true }));
   };
 
   // Set the right rail ads.

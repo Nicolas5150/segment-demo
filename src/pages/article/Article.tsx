@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { getData } from "src/utils/getData";
 import { getAdDataSorted } from "src/utils/helpers/getAdDataSorted";
-import { getMostFrequentEventCategory } from "src/utils/helpers/getMostFrequentEventCategory";
+import { getMostFrequentCategory } from "src/utils/helpers/getMostFrequentCategory";
 import { renderAdvertisements } from "src/utils/genericRender/renderAdvertisements";
 import { Article as ArticleType } from "src/types/data/article";
 import { Product as ProductType } from "src/types/data/product";
@@ -17,7 +17,7 @@ export function Article() {
 
   // Get the most frequent category type - ex: "Apple", "Android", "ETC"
   const getEventData = async () => {
-    setMostFrequentCategory(await getMostFrequentEventCategory());
+    setMostFrequentCategory(await getMostFrequentCategory({ byTrait: true }));
   };
 
   // Set the right rail ads.
