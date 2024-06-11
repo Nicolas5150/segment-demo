@@ -37,9 +37,13 @@ export function Article() {
   };
 
   useEffect(() => {
-    initArticleData();
-    initAdData();
-    getEventData();
+    const fetAllData = async () => {
+      await getEventData();
+      initArticleData();
+      initAdData();
+    };
+
+    fetAllData();
   }, []);
 
   if (!articleData || !productData) {

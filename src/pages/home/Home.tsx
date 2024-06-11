@@ -42,9 +42,13 @@ export function Home() {
   };
 
   useEffect(() => {
-    initArticleData();
-    initAdData();
-    getEventData();
+    const fetAllData = async () => {
+      await getEventData();
+      initArticleData();
+      initAdData();
+    };
+
+    fetAllData();
   }, []);
 
   if (!articleData || !productData) {
