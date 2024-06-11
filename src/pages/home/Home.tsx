@@ -8,7 +8,11 @@ import { renderArticles } from "src/utils/genericRender/renderArticles";
 import { Product as ProductType } from "src/types/data/product";
 import { Article as ArticleType } from "src/types/data/article";
 
-export function Home() {
+/**
+ * Component for rendering the home page.
+ * @returns {JSX.Element | null} - The rendered component.
+ */
+export function Home(): JSX.Element | null {
   const [articleData, setArticleData] = useState<Map<string, ArticleType[]>>();
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
   const [mostFrequentCategory, setMostFrequentCategory] = useState<string>("");

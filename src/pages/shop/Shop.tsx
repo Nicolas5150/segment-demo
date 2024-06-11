@@ -4,7 +4,11 @@ import { ProductCard } from "src/components/ProductCard";
 import { getData } from "src/utils/getData";
 import { Product as ProductType } from "src/types/data/product";
 
-export function Shop() {
+/**
+ * Component for rendering the Shopping page.
+ * @returns {JSX.Element | null} - The rendered component.
+ */
+export function Shop(): JSX.Element | null {
   const [productData, setProductData] = useState<Map<string, ProductType[]>>();
 
   // Set the main section product cards

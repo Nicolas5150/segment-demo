@@ -4,13 +4,20 @@ import { getData } from "../getData";
 
 const baseUrl = "http://localhost:3001/api";
 
-// This is the manual way of finding from the last tracked items a frequently visited article category.
-// It is prone to more errors and logic as it requires the frontend to parse the object
-// and may need to grab more than the last N events to get an accurate reading.
+/*
+  This is the manual way of finding from the last tracked items a frequently visited article category.
+  It is prone to more errors and logic as it requires the frontend to parse the object
+  and may need to grab more than the last N events to get an accurate reading.
 
-// The only time this seems to be more effective is if you need a more instantaneous result.
-// this is because it takes a few minutes to have the Trait in Segment updated while this fetches more up-to-date data.
-async function getMostFrequentCategoryByEvent(url: string) {
+  The only time this seems to be more effective is if you need a more instantaneous result.
+  This is because it takes a few minutes to have the Trait in Segment updated while this fetches more up-to-date data.
+*/
+/**
+ * Retrieves the most frequently visited article category by event tracking.
+ * @param {string} url - The URL to fetch the event data from.
+ * @returns {Promise<string>} - A promise that resolves to the most frequent article category.
+ */
+async function getMostFrequentCategoryByEvent(url: string): Promise<string> {
   const dataRetrieved = (await getData(url)) as EventDataResponse | null;
   const categories = new Map<string, number>();
   if (dataRetrieved == null || dataRetrieved?.data === null) {
@@ -33,8 +40,12 @@ async function getMostFrequentCategoryByEvent(url: string) {
   return "";
 }
 
-// Same function return as above but done server side by Segment Traits.
-async function getMostFrequentCategoryByTrait(url: string) {
+/**
+ * Retrieves the most frequently visited article category by trait data.
+ * @param {string} url - The URL to fetch the trait data from.
+ * @returns {Promise<string>} - A promise that resolves to the most frequent article category.
+ */
+async function getMostFrequentCategoryByTrait(url: string): Promise<string> {
   const dataRetrieved = (await getData(url)) as TraitDataResponse | null;
   if (
     dataRetrieved !== null &&
@@ -45,11 +56,16 @@ async function getMostFrequentCategoryByTrait(url: string) {
   return "";
 }
 
+/**
+ * Retrieves the most frequently visited article category, either by event tracking or by trait data.
+ * @param {boolean} [byTrait] - Indicates whether to retrieve the data by trait (true) or event tracking (false).
+ * @returns {Promise<string>} - A promise that resolves to the most frequent article category.
+ */
 export async function getMostFrequentCategory({
   byTrait,
 }: {
   byTrait?: boolean;
-} = {}) {
+} = {}): Promise<string> {
   const segmentUser = "segment-user";
   const user = localStorage.getItem(segmentUser);
 

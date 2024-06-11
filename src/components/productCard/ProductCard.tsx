@@ -4,12 +4,23 @@ import { Card } from "src/components/Card";
 import { productTracked } from "src/utils/segment/track/productTracked";
 import { Product as ProductType } from "src/types/data/product";
 
+/**
+ * Props for the ProductCard component.
+ */
 type ProductProps = {
   product: ProductType;
   currentCategory: string;
 };
 
-export function ProductCard({ product, currentCategory }: ProductProps) {
+/**
+ * A card component for displaying a product.
+ * @param {ProductProps} props - The component props.
+ * @returns {JSX.Element} - The rendered component.
+ */
+export function ProductCard({
+  product,
+  currentCategory,
+}: ProductProps): JSX.Element {
   const { title, body, image, price, uuid } = product;
 
   return (

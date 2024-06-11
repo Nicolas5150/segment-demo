@@ -3,7 +3,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { initId } from "src/utils/segment/identify/initId";
 
-export function Login() {
+/**
+ * Component for rendering the login page.
+ * @returns {JSX.Element | null} - The rendered component.
+ */
+export function Login(): JSX.Element | null {
   const segmentUser = "segment-user";
   const user = localStorage.getItem(segmentUser);
   const navigate = useNavigate();
@@ -16,6 +20,14 @@ export function Login() {
   const logUserIn = () => {
     localStorage.setItem(segmentUser, userNameValue);
     initId(userNameValue, { email: userNameValue, name: userNameValue });
+    /*
+      When a brand new user logs in for the first time, the Profile isn't instantiated fast enough
+      on segments side - before trying to query it. Therefore, we get a 500 error.
+      A hacky way to solve this is to set a timeout around the window location.
+      The more elegant solution would be to set a flag for a new user
+      and ignore the 500 or not even send the request the on the first mount.
+      Since this is a demo, we can just ignore it for the time being as it doesn't effect anything directly. 
+    */
     window.location.href = "/";
   };
 

@@ -6,6 +6,9 @@ import { articleTracked } from "src/utils/segment/track/articleTracked";
 import { Article } from "src/types/data/article";
 import "react-multi-carousel/lib/styles.css";
 
+/**
+ * Responsive settings for the carousel.
+ */
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -24,12 +27,23 @@ const responsive = {
   },
 };
 
+/**
+ * Props for the ArticleCarousel component.
+ */
 type ArticleCarouselProps = {
   articles: Article[];
   category: string;
 };
 
-export function ArticleCarousel({ articles, category }: ArticleCarouselProps) {
+/**
+ * A carousel component for displaying articles.
+ * @param {ArticleCarouselProps} props - The component props.
+ * @returns {JSX.Element} - The rendered component.
+ */
+export function ArticleCarousel({
+  articles,
+  category,
+}: ArticleCarouselProps): JSX.Element {
   return (
     <Box
       sx={{

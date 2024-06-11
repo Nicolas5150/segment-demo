@@ -9,7 +9,12 @@ type AdCardProps = {
   currentCategory: string;
 };
 
-export function AdCard({ product, currentCategory }: AdCardProps) {
+/**
+ * A card component for displaying advertisements.
+ * @param {AdCardProps} props - The component props.
+ * @returns {JSX.Element} - The rendered component.
+ */
+export function AdCard({ product, currentCategory }: AdCardProps): JSX.Element {
   const { title, image, price, uuid } = product;
   return (
     <Card

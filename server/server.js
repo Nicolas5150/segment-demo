@@ -3,11 +3,21 @@ import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
 
+/**
+ * Base URL for profiles API.
+ */
 const baseProfilesURL =
   "https://profiles.segment.com/v1/spaces/spa_7ibrGdDz7WuuHea4rS7wTZ/collections/users/profiles/";
 
+/**
+ * Authorization header value for API requests.
+ */
 const auth =
   "Basic NWoxT2Zya3MxS1YwVG8tcFRNR25OTzRjNktJWFlkRWt0TTc0Q0ZFYi1EbUo0TTBwVERXSkVsOWpuMEowcnhibEFkYUs0dGNEZmQ3TUN3UVotY2xEeWQwMGZMcURYaHNHSWxXcFY0dTlrM243MEpfcng3R2NmS0pYbDEzWU9sUmo5UHY1Qy1CV3JVQXEtbjR3NlBYZGQtakJnMU5MMF9HVzloNjNTMFFBZ3U3QW1OUlpnU3NhUjFLR1o2a19wM0U4YlhycHI4MjFaWDJrNE42MmtuWHlWNk1iaDRjclVtSUNRZ2ZIaUZHUXdEZkxZeE9HR3pYMVBnQ0Job05mZGtDaUhNYUx5WEk5c3JsNXpkVHRqN1BxTW12RGVWVT06";
+
+/**
+ * Configuration for fetch requests.
+ */
 const config = {
   method: "get",
   maxBodyLength: Infinity,
@@ -32,6 +42,11 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
+/**
+ * Fetches profile data from the specified URL.
+ * @param {string} url - The URL to fetch the data from.
+ * @returns {Promise<Object>} The JSON response data.
+ */
 async function getProfileData(url) {
   try {
     const response = await fetch(url, config);
@@ -47,6 +62,9 @@ async function getProfileData(url) {
   }
 }
 
+/**
+ * Express route handler for fetching events data.
+ */
 app.get("/api/events/:userId/:eventName", async (req, res) => {
   const { userId, eventName } = req.params;
   const url = `${baseProfilesURL}user_id:${userId}/events?include=${encodeURIComponent(eventName)}`;
@@ -61,6 +79,9 @@ app.get("/api/events/:userId/:eventName", async (req, res) => {
   }
 });
 
+/**
+ * Express route handler for fetching traits data.
+ */
 app.get("/api/traits/:userId/:traits", async (req, res) => {
   const { userId, traits } = req.params;
   const url = `${baseProfilesURL}user_id:${userId}/traits?include=${encodeURIComponent(traits)}`;

@@ -4,7 +4,11 @@ import { Box, Button, Typography } from "@mui/material";
 import { getData } from "src/utils/getData";
 import { Product as ProductType } from "src/types/data/product";
 
-export function Product() {
+/**
+ * Component for rendering the single product instance page.
+ * @returns {JSX.Element | null} - The rendered component.
+ */
+export function Product(): JSX.Element | null {
   const { uuid } = useParams();
   const productsUrl = "/data/products.json";
   const [productData, setProductData] = useState<ProductType>();

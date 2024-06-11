@@ -4,6 +4,10 @@ import { Error as ErrorPage } from "src/pages/error";
 import { navItems } from "./navItems";
 import { otherRoutes } from "./otherRoutes";
 
+/**
+ * The main browser router configuration.
+ * @type {Router}
+ */
 export const browserRouter = createBrowserRouter([
   {
     path: "/",

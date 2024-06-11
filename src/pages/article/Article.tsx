@@ -8,7 +8,11 @@ import { renderAdvertisements } from "src/utils/genericRender/renderAdvertisemen
 import { Article as ArticleType } from "src/types/data/article";
 import { Product as ProductType } from "src/types/data/product";
 
-export function Article() {
+/**
+ * Renders the article page with content and advertisements.
+ * @returns {JSX.Element | null} - The rendered component.
+ */
+export function Article(): JSX.Element | null {
   const { uuid } = useParams();
   const articlesUrl = "/data/articles.json";
   const [articleData, setArticleData] = useState<ArticleType>();

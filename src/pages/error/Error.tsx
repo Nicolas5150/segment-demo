@@ -1,11 +1,15 @@
 import { useRouteError } from "react-router-dom";
 
-interface RouteError {
+type RouteError = {
   statusText?: string;
   message?: string;
-}
+};
 
-export function Error() {
+/**
+ * Error component to display when a route error occurs.
+ * @returns {JSX.Element} - The rendered component.
+ */
+export function Error(): JSX.Element {
   const error = useRouteError() as RouteError;
   // eslint-disable-next-line no-console
   console.error(error);

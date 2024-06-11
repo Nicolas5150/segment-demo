@@ -1,6 +1,9 @@
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
+/**
+ * Props for the Card component.
+ */
 type CardProps = {
   cardType?:
     | React.ElementType<unknown, keyof React.JSX.IntrinsicElements>
@@ -12,6 +15,11 @@ type CardProps = {
   to?: string;
 };
 
+/**
+ * A generic card component.
+ * @param {CardProps} props - The component props.
+ * @returns {JSX.Element} - The rendered component.
+ */
 export function Card({
   cardType = Link,
   children,
@@ -19,7 +27,7 @@ export function Card({
   onClickHandler,
   sx,
   to,
-}: CardProps) {
+}: CardProps): JSX.Element {
   return (
     <Box
       component={cardType}
