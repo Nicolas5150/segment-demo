@@ -2,6 +2,7 @@
 import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
+import "dotenv/config";
 
 /**
  * Base URL for profiles API.
@@ -10,19 +11,13 @@ const baseProfilesURL =
   "https://profiles.segment.com/v1/spaces/spa_7ibrGdDz7WuuHea4rS7wTZ/collections/users/profiles/";
 
 /**
- * Authorization header value for API requests.
- */
-const auth =
-  "Basic NWoxT2Zya3MxS1YwVG8tcFRNR25OTzRjNktJWFlkRWt0TTc0Q0ZFYi1EbUo0TTBwVERXSkVsOWpuMEowcnhibEFkYUs0dGNEZmQ3TUN3UVotY2xEeWQwMGZMcURYaHNHSWxXcFY0dTlrM243MEpfcng3R2NmS0pYbDEzWU9sUmo5UHY1Qy1CV3JVQXEtbjR3NlBYZGQtakJnMU5MMF9HVzloNjNTMFFBZ3U3QW1OUlpnU3NhUjFLR1o2a19wM0U4YlhycHI4MjFaWDJrNE42MmtuWHlWNk1iaDRjclVtSUNRZ2ZIaUZHUXdEZkxZeE9HR3pYMVBnQ0Job05mZGtDaUhNYUx5WEk5c3JsNXpkVHRqN1BxTW12RGVWVT06";
-
-/**
  * Configuration for fetch requests.
  */
 const config = {
   method: "get",
   maxBodyLength: Infinity,
   headers: {
-    Authorization: auth,
+    Authorization: `Basic ${btoa(`${process.env.AUTH_TOKEN}:`)}`,
   },
 };
 
